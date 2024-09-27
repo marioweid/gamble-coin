@@ -13,4 +13,4 @@ RUN rm -rf src/ static/ emailTemplates/ docker-compose.yml
 
 # Run Command
 USER node:node
-CMD ["node", "build/index.js"]
+CMD ["node","--env-file=.env", "build/index.js"]
