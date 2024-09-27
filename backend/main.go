@@ -23,7 +23,8 @@ func getBeers(c *gin.Context) {
 
 func main() {
 	router := gin.Default()
-	router.GET("/api/beers", getBeers)
+	apiGroup := router.Group("/api")
+	apiGroup.GET("/api/beers", getBeers)
 	router.Run("0.0.0.0:8080")
 }
 
