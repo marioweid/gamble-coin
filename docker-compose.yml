@@ -14,7 +14,6 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
-    command: ["node","--env-file=.env", "build/index.js"]
 
   backend:
     build:
